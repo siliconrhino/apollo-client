@@ -153,6 +153,7 @@ export function queries(
     if (typeof action.fetchMoreForQueryId === 'string') {
       newState[action.fetchMoreForQueryId] = {
         ...previousState[action.fetchMoreForQueryId],
+        networkError: null,
         networkStatus: NetworkStatus.ready,
       };
     }
